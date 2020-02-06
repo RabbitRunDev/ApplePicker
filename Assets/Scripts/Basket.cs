@@ -11,6 +11,7 @@ public class Basket : MonoBehaviour
     void Start()
     {
         GameObject scoreGO = GameObject.Find("ScoreCounter");
+        scoreGT = scoreGO.GetComponent<Text>();
         scoreGT.text = "0";
     }
 
@@ -35,21 +36,21 @@ public class Basket : MonoBehaviour
 
     void OnCollisionEnter(Collision coll)
     {  
-        GameObject collidedWith = coll.gameObject; 
+        GameObject collidedWith = coll.gameObject;
         //What Hit Basket
         if (collidedWith.tag == "Apple")
-        {                                 
-            Destroy(collidedWith);
-        }
-
-        int score = int.Parse(scoreGT.text);
-        score += 100;
-        scoreGT.text = score.ToString();
-
-        if (score > HighScore.score)
         {
-            HighScore.score = score;
+            Destroy(collidedWith);
+            int score = int.Parse(scoreGT.text);
+            score += 100;
+            scoreGT.text = score.ToString();
+
+            if (score > HighScore.score)
+            {
+                HighScore.score = score;
+            }
         }
+
     }
 
 }
