@@ -138,6 +138,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e414ad56a51529945be3a119b01569eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  applePrefab: {fileID: 7608758308196761454, guid: 5d22650d07422a145a869a99680dd47f,
+    type: 3}
+  speed: 10
+  leftAndRightEdge: 20
+  chanceToChangeDirections: 0.02
+  secondsBetweenAppleDrops: 1
 --- !u!1 &1016378693
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,6 +155,7 @@ GameObject:
   - component: {fileID: 1016378696}
   - component: {fileID: 1016378695}
   - component: {fileID: 1016378694}
+  - component: {fileID: 1016378697}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -221,6 +228,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1016378697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016378693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 493f5d7f0aa2bd543b42dad0d03a6095, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  basketPrefab: {fileID: 3476356017087243216, guid: bed62a19db108514c8bd8916bb11ad6e,
+    type: 3}
+  numBaskets: 3
+  basketBottomY: -14
+  basketSpacingY: 2
 --- !u!1 &1903747332
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,6 +348,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: AppleTree
       objectReference: {fileID: 0}
+    - target: {fileID: 430716247603362131, guid: c96cb352b6f636f4784b8425500e732e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 430716247603362156, guid: c96cb352b6f636f4784b8425500e732e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -378,6 +407,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 430716248288566739, guid: c96cb352b6f636f4784b8425500e732e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 430716248504031991, guid: c96cb352b6f636f4784b8425500e732e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c96cb352b6f636f4784b8425500e732e, type: 3}
