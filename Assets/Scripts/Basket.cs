@@ -30,6 +30,7 @@ public class Basket : MonoBehaviour
 
         //Move X of Basket to Mouse X
         pos.x = mousePos3D.x;
+        pos.z = mousePos3D.y;
         this.transform.position = pos;
 
     }
