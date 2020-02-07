@@ -19,11 +19,12 @@ public class CubeInstancer : MonoBehaviour
         {
             instancePos.z = 0;
             instancePos.x += spacing;
-            for (int c = 0; c < columns; c++)
+            for (int c = 1; c < columns+1; c++)
             {
                 Instantiate(cube);
+                instancePos.z = spacing * c;
                 cube.transform.position = instancePos;
-                instancePos.z += spacing;
+                
             }
         }
     }
